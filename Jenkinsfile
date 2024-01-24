@@ -2,27 +2,33 @@ pipeline {
 
     agent any
 
+triggers {
+    pollscm "* * * * *"
+}
+
     stages {
 
-        stage{"build") {
+        stage ('build') {
+            steps {
+                echo "building the application"
+                sh '''
+                npm install
+                npm run build
+                '''
+            }
+
+        }
+
+              stage('test') {
 
             steps {
-                echo 'building the application'
+                echo "testing the application"
+                sh "npm run test"
+
             }
         }
 
-              stage{"test") {
+                    stage('deploy') {
 
             steps {
-                echo 'testing the application'
-            }
-        }
-
-                    stage{"deploy") {
-
-            steps {
-                echo 'deploying the application'
-            }
-        }
-    }
-}
+                echo "deploying the application"
