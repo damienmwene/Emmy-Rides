@@ -1,5 +1,11 @@
 pipeline {
 
+    node {
+
+        agent "docker-node-alpine-agent"
+
+    }
+
     agent any
 
         triggers {
