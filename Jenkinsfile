@@ -1,6 +1,6 @@
 pipeline {
 
-    node {
+    agent {
 
         label "docker-node-alpine"
 
