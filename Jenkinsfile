@@ -2,9 +2,9 @@ pipeline {
 
     agent any
 
-triggers {
-    pollscm "* * * * *"
-}
+        triggers {
+            pollscm "* * * * *"
+        }
 
     stages {
 
@@ -21,7 +21,7 @@ triggers {
 
     }
 
-              stage('test') {
+        stage('test') {
 
             steps {
                 echo "testing the application"
@@ -30,13 +30,13 @@ triggers {
             }
         }
 
-                    stage('deploy') {
+        stage('deploy') {
 
             steps {
                 echo "deploying the application"
           
             }
           
-                    }
+        }
 
 }
