@@ -1,8 +1,6 @@
 pipeline {
 
-    node {
-
-        // "docker-node-alpine-agent"
+    agent any
 
     }
 
