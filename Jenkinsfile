@@ -2,7 +2,7 @@ pipeline {
 
     node {
 
-        agent "docker-node-alpine-agent"
+        label "docker-node-alpine-agent"
 
     }
 
