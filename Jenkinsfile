@@ -6,15 +6,15 @@ pipeline {
 
     }
 
-        triggers {
-            pollSCM "* * * * *"
-        }
+    triggers {
+        pollSCM "* * * * *"
+    }
 
-        environment {
+    environment {
 
-            CI = false //do not treat errors as warnings
+        CI = false //do not treat errors as warnings
 
-        }
+    }
 
     stages {
 
