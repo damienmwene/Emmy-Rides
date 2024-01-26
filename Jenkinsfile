@@ -9,7 +9,13 @@ pipeline {
     agent any
 
         triggers {
-            pollscm "* * * * *"
+            pollSCM "* * * * *"
+        }
+
+        environment {
+
+            CI = false //do not treat errors as warnings
+
         }
 
     stages {
