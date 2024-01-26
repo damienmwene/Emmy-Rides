@@ -19,6 +19,8 @@ triggers {
 
         }
 
+    }
+
               stage('test') {
 
             steps {
@@ -32,3 +34,9 @@ triggers {
 
             steps {
                 echo "deploying the application"
+          
+            }
+          
+                    }
+
+}
