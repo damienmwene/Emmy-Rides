@@ -2,25 +2,28 @@ pipeline {
 
     agent any
 
-    triggers {
-        pollSCM "* * * * *"
-    }
-
-    environment {
-
-        CI = false //do not treat errors as warnings
-
-    }
-
     stages {
 
         stage ('build') {
             steps {
                 echo "building the application"
-                sh '''
-                npm install
-                npm run build
-                '''
+
+            }
+
+        }
+
+        stage ('test') {
+            steps {
+                echo "testing the application"
+
+            }
+
+        }
+
+        stage ('deploy') {
+            steps {
+                echo "deploying the application"
+
             }
 
         }
